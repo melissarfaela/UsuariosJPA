@@ -13,9 +13,6 @@ public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
 
     public Usuario criarUsuario(Usuario usuario){
-        if (usuarioRepository.existsById(usuario.getId())){
-            throw new RuntimeException("Usuário já existe :(");
-        }
         return usuarioRepository.save(usuario);
     }
 
